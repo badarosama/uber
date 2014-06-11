@@ -6,7 +6,7 @@ To run tests, type 'python tests.py'.
 Server
 
 1-/email accepts a POST request. It tries to send email through mailgun. Failing that it tries to send email through mandrill. If both servers fail to send email, it raises an exception.
-2- email.conf stores the config variables such as API keys and url-links. 
+2- server.conf stores the config variables such as API keys and url-links. 
 3- each request to the server is first validated using validate_request(). Validate request takes in a dict of values
 and checks to see if any key is missing or if there are more keys or whether the keys are formatted correctly. It also checks for null values and raises exceptions accordingly.
 4- the exceptions are handled in the server and displayed on the browser with the correct response value.
